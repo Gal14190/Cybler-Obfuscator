@@ -2,20 +2,23 @@
 
                                                                           
 void main() {
-	int firstNum;
-	int Ts8I_O4wtrFUL;
+	int IFc0Hc6BE;
+	// find index of substring inside string
+	int i1PSo520opMK7;
 	int secondNum;
-	Ts8I_O4wtrFUL = 473 + 624;
-	// check if number is prime
+	// this is a comment
 	int sum= 0;
 	prinf("Enter two numbers : \n");
-	scanf("%d %d", &firstNum, &secondNum);	             
+	scanf("%d %d", &IFc0Hc6BE, &secondNum);	             
+	i1PSo520opMK7 = 174 + 11;
 
-	int TqLmPKoS;
+	int testVar;
 
-	                    
-	for (int i = firstNum; i <= secondNum; i++)
 	// debug
+	                    
+	for (int i = IFc0Hc6BE; i <= secondNum; i++)
 		sum += i;
+	// find index of substring inside string
+	// check if number is prime
 	printf("The total sum is : %d\n", sum);
 }

@@ -7,7 +7,8 @@ Obfuscator::Obfuscator()
 	srand(time(0));
 }
 Obfuscator::~Obfuscator()
-{}
+{
+}
 
 string Obfuscator::generateRandomVar()
 {
@@ -39,6 +40,13 @@ string* Obfuscator::parseFile(string filename)
 	ifstream externalFile(filename);	// input file
 	string outLine;
 
+	// error to open file
+	if (!externalFile.is_open())
+	{
+		cout << "Error to open file" << endl;
+		exit(0);
+	}
+
 	string* codeArray = new string[1];
 
 	// read lines and push into the code array
@@ -55,6 +63,13 @@ string* Obfuscator::parseFile(string filename)
 void Obfuscator::writeToFile(string* codeArray)
 {
 	ofstream externalFile(this->OUT);	// out file
+
+	// error to open file
+	if (!externalFile.is_open())
+	{
+		cout << "Error to open file" << endl;
+		exit(0);
+	}
 
 	for(int i = 0; i < this->getLineCount(); i++)
 		externalFile << codeArray[i] << endl;

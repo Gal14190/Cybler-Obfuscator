@@ -8,6 +8,9 @@
 
 using namespace std;
 
+/**
+* Base class for Obfuscator method uses.
+*/
 class Obfuscator {
 private:
 	const int MAX_VAR_CHARS = 10;	// max of chars in varible to generate
