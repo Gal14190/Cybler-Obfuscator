@@ -48,21 +48,21 @@ void CommentObfuscator::deleteComments(string* codeArray)
 
 void CommentObfuscator::writeComments(string*& codeArray)
 {
-	int mount = (int)(1 + rand() % MAX_COMMENTS); // randomize the mount of the comments to push
+	int mount = (int)(MIN_COMMENTS + rand() % (MAX_COMMENTS - MIN_COMMENTS + 1)); // randomize the mount of the comments to push
 
 	for (int i = 0; i < mount; i++)
 	{
-		int index = (int)(1 + rand() % (getLineCount() - 2)); // randomize the location of the comment to push
+		int index = (int)(rand() % (getLineCount() - 2)); // randomize the location of the comment to push
 		
 		// randomize comment
 		string comment = vComments.at(
-			(int)(rand() % (vComments.size() - 1))
+			(int)(rand() % (vComments.size()))
 		);
 
 		// push the comment into the code array
 		this->insetAfter(codeArray, index, comment);
 
 		// log
-		cout << "Write comment. index: " << i << " comment: " << comment << endl;
+		cout << "Write comment. index: " << index << " comment: " << comment << endl;
 	}
 }

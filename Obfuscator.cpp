@@ -18,8 +18,8 @@ string Obfuscator::generateRandomVar()
 
 	int countChars, pos;
 
-	// random number for how many chars the name of var will contain
-	countChars = (int)(MIN_VAR_CHARS + rand() % (MAX_VAR_CHARS));
+	// random number for how many chars the name of variable will contain
+	countChars = (int)(MIN_VAR_CHARS + rand() % (MAX_VAR_CHARS - MIN_VAR_CHARS + 1));
 
 	for (int i = 0; i < countChars; i++)
 	{

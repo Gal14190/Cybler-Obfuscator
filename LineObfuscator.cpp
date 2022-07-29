@@ -25,8 +25,8 @@ void LineObfuscator::obfuscate(string fileName)
 
 	// randomize two numbers and get formula
 	string varCall_str = formula(varName);
-	int randPosition = (int)(mainIndex + 2 + rand() % (endSection(codeArray, mainIndex + 2)));	// randomize location
-
+	int randPosition = (int)(mainIndex + 2 + rand() % (endSection(codeArray, mainIndex + 2) - mainIndex + 1));	// randomize location
+	
 	this->insetAfter(codeArray, mainIndex + 1, varInit_str);// push the init varible after 'void main' location
 	this->insetAfter(codeArray, randPosition, varCall_str);	// push the varible use
 

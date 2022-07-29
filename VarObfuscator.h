@@ -8,7 +8,7 @@
 */
 class VarObfuscator : public Obfuscator {
 private:
-	const string var_type = "\tint";	// define varible type
+	const string VAR_TYPE = "\tint";	// define varible type
 
 	/**
 	* find all the init integer in the code array

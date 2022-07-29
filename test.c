@@ -8,8 +8,6 @@ void main() {
 	prinf("Enter two numbers : \n");
 	scanf("%d %d", &firstNum, &secondNum);	// gets input
 
-	int testVar;
-
 	// calculate the sum
 	for (int i = firstNum; i <= secondNum; i++)
 		sum += i;

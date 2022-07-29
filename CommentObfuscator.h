@@ -8,6 +8,7 @@
 class CommentObfuscator : public Obfuscator {
 private:
 	const int MAX_COMMENTS = 5; // max comments to push
+	const int MIN_COMMENTS = 2; // min comments to push
 
 	vector<string> vComments;
 
